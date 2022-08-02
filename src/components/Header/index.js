@@ -1,7 +1,8 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Header = () => {
     const [isHovering, setIsHovering] = useState(false);
@@ -23,9 +24,12 @@ const Header = () => {
                 }
             }} 
             className='logo' onMouseOver={onMouseHover} onMouseOut={onMouseHoverOut}>
-            {isHovering ? 	"{ RYV }" : "reymondyv"}
+            <Link to='/'>{isHovering ? 	"{ RYV }" : "reymondyv"}</Link>
         </motion.h1>
         <ul>
+            <input type='checkbox' id='checkbox_toggle' />
+            <label for='checkbox_toggle' className='hamburger'>&#9776;</label>
+            <div className='menu'>
             <li>
                 <NavLink to='/'>{({ isActive }) => (
                     isActive ? ".home()" : "home"
@@ -52,6 +56,7 @@ const Header = () => {
             <li className='social-icon'>
                 <a href='https://linkedin.com/in/reymondyv' target='_blank'><BsLinkedin /></a>
             </li>
+            </div>
         </ul>
         
     </header>
