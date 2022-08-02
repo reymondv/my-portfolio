@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box ;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: rgb(40, 37, 43);
+  min-height: 200vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  top: 0;
+  left: 0;
+  position: fixed;
   display: flex;
-  flex-direction: column;
+  height: 3.5rem;
+  width: 100%;
+  justify-content: space-between;
   align-items: center;
+}
+
+header .logo {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+header ul {
+  list-style: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-left: 200px;
+  min-height: 3rem;
+}
+
+header ul li {
+  position: relative;
+}
+
+header ul li a {
+  position: relative;
   color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  cursor: pointer;
+  transition: color .5s ease-out;
 }
 
-.App-link {
-  color: #61dafb;
+.content-container {
+  margin: 0 15vw;
+  padding-top: calc(50vh - 3.5rem);
+  min-height: 100vh;
+  color: aliceblue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active {
+  color: rgb(153, 153, 153);
+}
+
+header a:hover {
+  color:rgb(0, 217, 255)
+}
+
+.social-icon {
+  font-size: 1.5em;
+  margin: 0;
+  padding-top: 3px;
+  flex: 0 0 auto;
+  align-items: center;
+  text-align: center;
 }
