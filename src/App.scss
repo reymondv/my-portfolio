@@ -17,10 +17,9 @@ header {
     display: flex;
     height: 4rem;
     width: 100%;
-    background-color: rgba(0, 0, 0, 1);
     justify-content: space-between;
     align-items: center;
-    box-shadow: -1px 77px 201px 28px rgba(0, 0, 0, 0.76);
+    transition: all 0.5s ease-in-out;
     .logo {
         position: absolute;
         text-decoration: none;
@@ -29,6 +28,12 @@ header {
         margin-left: 10vw;
         cursor: pointer;
     }
+}
+
+.sticky {
+    background-color: rgb(0, 0, 0);
+    box-shadow: -1px 77px 201px 28px rgba(0, 0, 0, 0.76);
+    transition: all 0.5s ease-in-out;
 }
 
 .logo a {

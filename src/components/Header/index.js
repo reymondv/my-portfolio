@@ -1,41 +1,41 @@
 import { NavLink, Link } from 'react-router-dom'
-import { useState } from 'react';
+import { useState} from 'react';
 import { motion } from 'framer-motion';
 import { BsLinkedin, BsGithub } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { FaTimes } from 'react-icons/fa';
+import OnScroll from '../../etc/OnScroll.js';
 
 const Header = () => {
-    const [isHovering, setIsHovering] = useState(false);
+    // const [isHovering, setIsHovering] = useState(false);
     const [isToggle, setToggle] = useState(false);
-    const onMouseHover = () => {
-        setIsHovering(!isHovering);
-    };
+    const [isSticky, setSticky] = useState(false);
 
-    const onToggleHamburger = () => {
-        setToggle(!isToggle);
-    }   
-
+    // const onMouseHover = () => {
+    //     setIsHovering(!isHovering);
+    // };
   return (
-    <header>
+    <>
+    <OnScroll state={setSticky}/>
+    <header className={(isSticky ? 'sticky' : '')}>
         <h2 className='logo'>
             <Link to='/'><span className="font-main">&#123; RYV &#125;</span></Link>
         </h2>
         <ul>
-            <input type='checkbox' id='checkbox_toggle' onClick={onToggleHamburger}/>
+            <input type='checkbox' id='checkbox_toggle'/>
             <motion.div 
             initial={{ y: -100 }}
             animate={{ opacity: !isToggle ? 1 : 0, y: !isToggle ? 0 : -100 }}
             transition={{ type: "spring", stiffness: 60, damping: 10 }}
-            onClick={{ onToggleHamburger }}>
-                {!isToggle && <label for='checkbox_toggle' className='hamburger'> <GiHamburgerMenu /> </label>}
+            onClick={ ()=> setToggle(!isToggle) }>
+                {!isToggle && <label htmlFor='checkbox_toggle' className='hamburger'> <GiHamburgerMenu /> </label>}
             </motion.div>
             <motion.div 
             initial={{ y: 0 }}
             animate={{ opacity: !isToggle ? 0 : 1, y: !isToggle ? -100 : 0 }}
             transition={{ type: "spring", stiffness: 60, damping: 10 }}
-            onClick={{ onToggleHamburger }}>
-                {isToggle && <label for='checkbox_toggle' className='hamburger'><FaTimes /></label>}
+            onClick={ ()=> setToggle(!isToggle) }>
+                {isToggle && <label htmlFor='checkbox_toggle' className='hamburger'><FaTimes /></label>}
             </motion.div>
             <div className='menu'>
             <li>
@@ -68,6 +68,7 @@ const Header = () => {
         </ul>
         
     </header>
+    </>
   )
 }
 
