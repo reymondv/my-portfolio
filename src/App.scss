@@ -21,15 +21,14 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: -1px 77px 201px 28px rgba(0, 0, 0, 0.76);
-}
-
-header .logo {
-    position: absolute;
-    text-decoration: none;
-    color: #fff;
-    font-size: 2em;
-    margin-left: 10vw;
-    cursor: pointer;
+    .logo {
+        position: absolute;
+        text-decoration: none;
+        color: #fff;
+        font-size: 2em;
+        margin-left: 10vw;
+        cursor: pointer;
+    }
 }
 
 .logo a {
@@ -50,21 +49,19 @@ header ul {
     justify-content: center;
     margin: 0;
     min-height: 3rem;
-}
-
-.menu li {
-    position: relative;
-}
-
-.menu a {
-    position: relative;
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    letter-spacing: 2px;
-    font-weight: 400;
-    cursor: pointer;
-    transition: color .5s ease-out;
+    li {
+        position: relative;
+    }
+    a {
+        position: relative;
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        letter-spacing: 2px;
+        font-weight: 400;
+        cursor: pointer;
+        transition: color .5s ease-out;
+    }
 }
 
 .content-container {
@@ -76,12 +73,13 @@ header ul {
     line-height: 2rem;
 }
 
-.menu .active {
-    color: rgb(138, 138, 138);
-}
-
-.menu a:hover {
-    color: rgb(0, 217, 255);
+.menu {
+    .active {
+        color: rgb(138, 138, 138);
+    }
+    a:hover {
+        color: rgb(0, 217, 255);
+    }
 }
 
 .social-icon {
@@ -104,13 +102,20 @@ input[type=checkbox] {
     user-select: none;
 }
 
-a .font-main {
-    transition: color .5s ease-out;
+.exit-hamburger {
+    color: #fff;
+    font-size: 24px;
+    display: none;
+    user-select: none;
 }
 
-a:hover .font-main {
-    color: rgb(0, 217, 255);
-    ;
+a {
+    .font-main {
+        transition: color .5s ease-out;
+    }
+    &:hover .font-main {
+        color: rgb(0, 217, 255);
+    }
 }
 
 .font-main {
@@ -130,7 +135,7 @@ a:hover .font-main {
         left: 0;
         text-align: center;
         min-height: 100vh;
-        margin-top: 5vh;
+        margin-top: 7vh;
     }
     header {
         background-color: rgba(9, 9, 9, 1);
@@ -139,8 +144,8 @@ a:hover .font-main {
         width: 100%;
     }
     .menu li a {
-        font-size: 3rem;
-        line-height: auto;
+        font-size: 2rem;
+        line-height: 3rem;
         height: auto;
         text-align: right;
         font-weight: bold;
@@ -150,6 +155,7 @@ a:hover .font-main {
         margin: 0 -30vw;
         padding: 0 auto;
         text-align: center;
+        font-size: 24px;
     }
     .hamburger {
         display: block;
@@ -159,12 +165,22 @@ a:hover .font-main {
         display: block;
     }
     .content-container {
-        margin: 0 40px;
         text-align: left;
-        font-size: 0.5rem;
+        font-size: 100%;
+        text-justify: auto;
+        text-align: left;
+        overflow-wrap: break-word;
+        height: auto;
+        h1 {
+            font-size: 20px;
+        }
+        h4 {
+            font-size: 13px;
+            line-height: 1rem;
+        }
     }
     .social-icon {
-        padding-top: 2rem;
+        padding-top: 1rem;
         display: inline-flex;
     }
 }
