@@ -17,15 +17,9 @@ const Header = () => {
 
   return (
     <header>
-        <motion.h1 whileHover={
-            { scale: 1.2, 
-                transition: {
-                duration: 0.4
-                }
-            }} 
-            className='logo' onMouseOver={onMouseHover} onMouseOut={onMouseHoverOut}>
-            <Link to='/'>{isHovering ? 	"{ RYV }" : "reymondyv"}</Link>
-        </motion.h1>
+        <h2 className='logo'>
+            <Link to='/'><span className="font-main">&#123; RYV &#125;</span></Link>
+        </h2>
         <ul>
             <input type='checkbox' id='checkbox_toggle' />
             <label for='checkbox_toggle' className='hamburger'>&#9776;</label>
@@ -51,10 +45,10 @@ const Header = () => {
                 )}</NavLink>
             </li>
             <li className='social-icon'>
-                <a href='https://github.com/reymondv' target='_blank'><BsGithub /></a>
+                <a href='https://github.com/reymondv' target='_blank'  rel="noreferrer"><span className="font-main"><BsGithub /></span></a>
             </li>
             <li className='social-icon'>
-                <a href='https://linkedin.com/in/reymondyv' target='_blank'><BsLinkedin /></a>
+                <a href='https://linkedin.com/in/reymondyv' target='_blank'  rel="noreferrer"><span className="font-main"><BsLinkedin /></span></a>
             </li>
             </div>
         </ul>

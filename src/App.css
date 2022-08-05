@@ -17,8 +17,10 @@ header {
     display: flex;
     height: 3.5rem;
     width: 100%;
+    background-color: rgba(0, 0, 0, 1);
     justify-content: space-between;
     align-items: center;
+    box-shadow: -1px 77px 201px 28px rgba(0, 0, 0, 0.76);
 }
 
 header .logo {
@@ -60,20 +62,22 @@ header ul {
     text-decoration: none;
     margin: 0 15px;
     letter-spacing: 2px;
-    font-weight: 500px;
+    font-weight: 400;
     cursor: pointer;
     transition: color .5s ease-out;
 }
 
 .content-container {
     margin: 0 15vw;
-    padding-top: calc(50vh - 3.5rem);
+    padding-top: calc(50vh - 6rem);
     min-height: 100vh;
     color: aliceblue;
+    height: auto;
+    line-height: 2rem;
 }
 
 .menu .active {
-    color: rgb(153, 153, 153);
+    color: rgb(138, 138, 138);
 }
 
 .menu a:hover {
@@ -98,6 +102,23 @@ input[type=checkbox] {
     font-size: 24px;
     display: none;
     user-select: none;
+}
+
+a .font-main {
+    transition: color .5s ease-out;
+}
+
+a:hover .font-main {
+    color: rgb(0, 217, 255);
+    ;
+}
+
+.font-main {
+    color: rgb(255, 99, 8);
+}
+
+.font-green {
+    color: rgb(0, 236, 71);
 }
 
 @media screen and (max-width: 800px) {
