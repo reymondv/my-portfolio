@@ -27,13 +27,23 @@ header {
         font-size: 2em;
         margin-left: 10vw;
         cursor: pointer;
+        display: flex;
+        align-items: center;
+        img {
+            max-width: 50px;
+            height: auto;
+            margin-right: 20px;
+        }
     }
 }
 
 .sticky {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(11, 15, 15);
     box-shadow: -1px 77px 201px 28px rgba(0, 0, 0, 0.76);
     transition: all 0.5s ease-in-out;
+    a {
+        color: aliceblue;
+    }
 }
 
 .logo a {
@@ -135,18 +145,13 @@ a {
     .menu {
         display: none;
         position: absolute;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(0, 0, 0, 0.94);
         right: 0;
         left: 0;
+        top: 56px;
         text-align: center;
         min-height: 100vh;
-        margin-top: 7vh;
-    }
-    header {
-        background-color: rgba(9, 9, 9, 1);
-        box-shadow: none;
-        box-shadow: -1px 1px 201px 20px rgba(0, 0, 0, 0.76);
-        width: 100%;
+        padding-top: 7vh;
     }
     .menu li a {
         font-size: 2rem;
@@ -156,15 +161,21 @@ a {
         font-weight: bold;
     }
     header .logo {
-        min-width: 100%;
-        margin: 0 -30vw;
-        padding: 0 auto;
         text-align: center;
         font-size: 24px;
+        margin-left: 5vw;
+        img {
+            width: auto;
+            margin: 0;
+            margin-right: 10px;
+        }
+        a {
+            margin: 0;
+        }
     }
     .hamburger {
         display: block;
-        margin-right: -5vw;
+        margin-right: -5vw
     }
     input[type=checkbox]:checked~.menu {
         display: block;

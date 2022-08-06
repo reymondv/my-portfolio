@@ -5,24 +5,23 @@ import { BsLinkedin, BsGithub } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { FaTimes } from 'react-icons/fa';
 import OnScroll from '../../etc/OnScroll.js';
+import Logo from '../../images/icon.png';
 
 const Header = () => {
-    // const [isHovering, setIsHovering] = useState(false);
     const [isToggle, setToggle] = useState(false);
     const [isSticky, setSticky] = useState(false);
-
-    // const onMouseHover = () => {
-    //     setIsHovering(!isHovering);
-    // };
+    const headerBlock = {
+        backgroundColor: 'rgb(0, 0, 0)'
+    };
   return (
     <>
     <OnScroll state={setSticky}/>
-    <header className={(isSticky ? 'sticky' : '')}>
-        <h2 className='logo'>
-            <Link to='/'><span className="font-main">&#123; RYV &#125;</span></Link>
-        </h2>
+    <header className={(isSticky ? 'sticky' : '')} style={!isToggle ? null : headerBlock}>
+        <div className='logo'><img src={Logo} alt={Logo} />
+            <Link to='/'><span className="font-main">&#123;</span> reymondyv <span className="font-main">&#125;</span></Link>
+        </div>
         <ul>
-            <input type='checkbox' id='checkbox_toggle'/>
+            <input type='checkbox' id='checkbox_toggle' checked={isToggle} readOnly/>
             <motion.div 
             initial={{ y: -100 }}
             animate={{ opacity: !isToggle ? 1 : 0, y: !isToggle ? 0 : -100 }}

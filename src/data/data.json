@@ -1,0 +1,50 @@
+{
+    "profile": {
+        "description": ["Aspiring Fullstack software engineer but heavily interested in backend side of the application. A team player who wants to work closely with the team to deliver efficient and fully functional application.", "Experienced working in an agile scrum methodology during my internship, but to limited access with the team", "Currently self-studying popular tech stack like React, Angular, Node, and MongoDB"],
+        "name": "Reymond Y. Villanueva",
+        "location": "La Union, Philippines",
+        "gender": "Male",
+        "school": {
+            "name": "Saint Louis University",
+            "location": "Baguio City, Philippines",
+            "graduated": "June 2022"
+        },
+        "degree": {
+            "abbr": "BSIT",
+            "short": "BS in Information Technology",
+            "full": "Bachelor of Science in Information Technology"
+        }
+    },
+    "cv": {
+        "file": "reymond.villanueva.cv.pdf",
+        "name": "My CV",
+        "label": "CV"
+    },
+    "skills": {
+        "general": [
+            "Fullstack Developer", "Backend Developer", "Web and Software application", "Networking"
+        ],
+        "stack": ["HTML", "CSS", "JavaScript", "PHP", "React", "Laravel Framework",
+            "Java", "Python", "MySQL", "MongoDB"
+        ],
+        "other": ["Network administration", "Network troubleshooting", "Git", "Microsoft Power Apps"]
+    },
+    "experience": [{
+            "position": "Application Developer (Internship Trainee)",
+            "company": "Accenture",
+            "date": "February 2022 - June 2022",
+            "work": "Developed an application using Microsoft Power Apps and SharePoint List as the application's back-end. I've been trained and knowledgeable in Microsoft Power Automate and exposed in collaboration with the team during scrums and sprint meetings."
+        },
+        {
+            "position": "Lead Programmer (Thesis Project)",
+            "company": "Saint Louis University",
+            "date": "May 2021 - November 2021",
+            "work": "Developed an Asset Management System for DICT - Luzon Cluster 1 for my capstone(IT Project) as a Full-stack web developer and the Lead Programmer of the team. Web development background and technologies used are HTML5, CSS3, JavaScript, PHP, Laravel 7, Bootstrap, and MySQL."
+        }
+    ],
+    "links": {
+        "email": "reymondyv@gmail.com",
+        "github": "http://github.com/reymondv",
+        "linkedin": "http://linkedin.com/in/reymondyv"
+    }
+}

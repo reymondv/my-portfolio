@@ -1,8 +1,10 @@
-import React from 'react'
-
-const Works = () => {
+const Works = ({json}) => {
   return (
-    <>Works</>
+    <>
+    {json.map((data, idx) => (
+      <p key={idx}>{data.company}</p>
+    ))}
+    </>
   )
 }
 
