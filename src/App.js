@@ -14,13 +14,13 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
+        <Header json={myData.links} />
         <ScrollToTop />
         <div className="content-container" >
           <Routes>
             <Route exact path="/" 
             element={<Home />} />
-            
+
             <Route path="/works" 
             element={<Works json={myData.experience} />} />
 

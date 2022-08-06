@@ -7,7 +7,7 @@ import { FaTimes } from 'react-icons/fa';
 import OnScroll from '../../etc/OnScroll.js';
 import Logo from '../../images/icon.png';
 
-const Header = () => {
+const Header = ({json}) => {
     const [isToggle, setToggle] = useState(false);
     const [isSticky, setSticky] = useState(false);
     const headerBlock = {
@@ -38,30 +38,30 @@ const Header = () => {
             </motion.div>
             <div className='menu'>
             <li>
-                <NavLink to='/'>{({ isActive }) => (
+                <NavLink to='/' title='Home'>{({ isActive }) => (
                     isActive ? ".home()" : "home"
                 )}</NavLink>
             </li>
             <li>
-                <NavLink to='/about'>{({ isActive }) => (
+                <NavLink to='/about' title='About me'>{({ isActive }) => (
                     isActive ? ".about()" : "about"
                 )}</NavLink>
             </li>
             <li>
-                <NavLink to='/works'>{({ isActive }) => (
+                <NavLink to='/works' title='My works'>{({ isActive }) => (
                     isActive ? ".works()" : "works"
                 )}</NavLink>
             </li>
             <li>
-                <NavLink to='/contact'>{({ isActive }) => (
+                <NavLink to='/contact' title='My contact'>{({ isActive }) => (
                     isActive ? ".contact()" : "contact"
                 )}</NavLink>
             </li>
             <li className='social-icon'>
-                <a href='https://github.com/reymondv' target='_blank'  rel="noreferrer"><span className="font-main"><BsGithub /></span></a>
+                <a href={json.github} target='_blank'  rel="noreferrer" title='Github'><span className="font-main"><BsGithub /></span></a>
             </li>
             <li className='social-icon'>
-                <a href='https://linkedin.com/in/reymondyv' target='_blank'  rel="noreferrer"><span className="font-main"><BsLinkedin /></span></a>
+                <a href={json.linkedin} target='_blank'  rel="noreferrer" title='Linkedin'><span className="font-main"><BsLinkedin /></span></a>
             </li>
             </div>
         </ul>
