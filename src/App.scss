@@ -7,43 +7,63 @@
 
 body {
     background-color: rgb(40, 37, 43);
-    min-height: 200vh;
 }
 
 header {
+    margin: 0;
+    padding: 0 15vw;
     right: 0;
     left: 0;
     position: fixed;
     display: flex;
     height: 4rem;
-    width: 100%;
     justify-content: space-between;
     align-items: center;
     transition: all 0.5s ease-in-out;
+    z-index: 9999;
     .logo {
-        position: absolute;
+        position: relative;
         text-decoration: none;
         color: #fff;
         font-size: 2em;
-        margin-left: 10vw;
+        margin: 0;
+        // margin-left: 10vw;
         cursor: pointer;
-        display: flex;
-        align-items: center;
         img {
             max-width: 50px;
             height: auto;
             margin-right: 20px;
+        }
+        a {
+            display: flex;
+            align-items: center;
         }
     }
 }
 
 .sticky {
     background-color: rgb(11, 15, 15);
-    box-shadow: -1px 77px 201px 28px rgba(0, 0, 0, 0.76);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.1s linear;
+    position: fixed;
+    z-index: 9999;
     a {
         color: aliceblue;
     }
+}
+
+.custom-shape-divider-top-1659878004 {
+    width: 100%;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.custom-shape-divider-top-1659878004 svg {
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.custom-shape-divider-top-1659878004 .shape-fill {
+    fill: #000000fd;
 }
 
 .logo a {
@@ -52,7 +72,7 @@ header {
 }
 
 header ul {
-    margin-right: 10vw;
+    // margin-right: 10vw;
 }
 
 .menu {
@@ -99,7 +119,7 @@ header ul {
 
 .social-icon {
     font-size: 1.5em;
-    margin: 0;
+    margin: 0 10px;
     padding-top: 3px;
     flex: 0 0 auto;
     align-items: center;
@@ -160,10 +180,13 @@ a {
         text-align: right;
         font-weight: bold;
     }
+    header {
+        margin: 0;
+        padding: 0 5vw;
+    }
     header .logo {
         text-align: center;
         font-size: 24px;
-        margin-left: 5vw;
         img {
             width: auto;
             margin: 0;
@@ -175,7 +198,6 @@ a {
     }
     .hamburger {
         display: block;
-        margin-right: -5vw
     }
     input[type=checkbox]:checked~.menu {
         display: block;
@@ -197,6 +219,7 @@ a {
     }
     .social-icon {
         padding-top: 1rem;
+        margin: auto;
         display: inline-flex;
     }
 }
