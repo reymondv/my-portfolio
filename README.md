@@ -1,5 +1,7 @@
 # Live Website Portfolio
 
+![portfolio](/public/carousel/portfolio-2.png)
+
 Visit link below to view deployed website\
 http://reymondyv.vercel.app
 
