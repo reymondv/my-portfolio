@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: rgb(40, 37, 43);
+    background-color: black;
 }
 
 header {
@@ -19,7 +19,7 @@ header {
     height: 4rem;
     justify-content: space-between;
     align-items: center;
-    transition: all 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
     z-index: 9999;
     .logo {
         position: relative;
@@ -43,7 +43,7 @@ header {
 
 .sticky {
     background-color: rgb(11, 15, 15);
-    transition: all 0.1s linear;
+    transition: color 0.1s linear;
     position: fixed;
     z-index: 9999;
     a {
@@ -153,15 +153,14 @@ a {
     }
 }
 
-.font-main {
-    color: rgb(255, 99, 8);
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 0 5vh;
+        margin: 0 auto;
+    }
 }
 
-.font-green {
-    color: rgb(0, 236, 71);
-}
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     .menu {
         display: none;
         position: absolute;

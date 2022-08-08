@@ -11,6 +11,9 @@ const Header = ({ json }) => {
   const [isToggle, setToggle] = useState(false);
   const [isSticky, setSticky] = useState(false);
 
+  const menuClicked = () => setToggle(false);
+  const toggleHamburgerMenu = () => setToggle(!isToggle);
+
   const headerBlock = {
     backgroundColor: 'rgb(0, 0, 0)',
   };
@@ -21,10 +24,10 @@ const Header = ({ json }) => {
         className={isSticky ? 'sticky' : ''}
         style={!isToggle ? null : headerBlock}>
         <div className='logo'>
-          <Link to='/' onClick={() => setToggle(false)}>
+          <Link to='/' onClick={menuClicked}>
             <img src={Logo} alt={Logo} />
-            <span className='font-main'>&#123;</span> reymondyv{' '}
-            <span className='font-main'>&#125;</span>
+            <span className='text-orange-550'>&#123;&nbsp;</span>reymondyv
+            <span className='text-orange-550'>&nbsp;&#125;</span>
           </Link>
         </div>
         <ul>
@@ -38,7 +41,7 @@ const Header = ({ json }) => {
             initial={{ y: -100 }}
             animate={{ opacity: !isToggle ? 1 : 0, y: !isToggle ? 0 : -100 }}
             transition={{ type: 'spring', stiffness: 60, damping: 10 }}
-            onClick={() => setToggle(!isToggle)}>
+            onClick={toggleHamburgerMenu}>
             {!isToggle && (
               <label htmlFor='checkbox_toggle' className='hamburger'>
                 {' '}
@@ -50,7 +53,7 @@ const Header = ({ json }) => {
             initial={{ y: 0 }}
             animate={{ opacity: !isToggle ? 0 : 1, y: !isToggle ? -100 : 0 }}
             transition={{ type: 'spring', stiffness: 60, damping: 10 }}
-            onClick={() => setToggle(!isToggle)}>
+            onClick={toggleHamburgerMenu}>
             {isToggle && (
               <label htmlFor='checkbox_toggle' className='hamburger'>
                 <FaTimes />
@@ -59,52 +62,43 @@ const Header = ({ json }) => {
           </motion.div>
           <div className='menu'>
             <li>
-              <NavLink to='/' title='Home' onClick={() => setToggle(false)}>
+              <NavLink to='/' title='Home' onClick={menuClicked}>
                 {({ isActive }) => (isActive ? '.home()' : 'home')}
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to='/about'
-                title='About me'
-                onClick={() => setToggle(false)}>
+              <NavLink to='/about' title='About me' onClick={menuClicked}>
                 {({ isActive }) => (isActive ? '.about()' : 'about')}
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to='/works'
-                title='My works'
-                onClick={() => setToggle(false)}>
+              <NavLink to='/works' title='My works' onClick={menuClicked}>
                 {({ isActive }) => (isActive ? '.works()' : 'works')}
               </NavLink>
             </li>
             <li>
-              <NavLink
-                to='/contact'
-                title='My contact'
-                onClick={() => setToggle(false)}>
+              <NavLink to='/contact' title='My contact' onClick={menuClicked}>
                 {({ isActive }) => (isActive ? '.contact()' : 'contact')}
               </NavLink>
             </li>
-            <li className='social-icon'>
+            <li className='text-[1.5rem] mx-2 pt-1 my-0 flex-auto items-center text-center md:inline-flex md:pt-[1rem] md:mx-auto md:my-auto '>
               <a
                 href={json.github}
                 target='_blank'
                 rel='noreferrer'
                 title='Github'>
-                <span className='font-main'>
+                <span className='text-orange-550'>
                   <BsGithub />
                 </span>
               </a>
             </li>
-            <li className='social-icon'>
+            <li className='text-[1.5rem] mx-2 pt-1 my-0 flex-auto items-center text-center md:inline-flex md:pt-[1rem] md:mx-auto md:my-auto '>
               <a
                 href={json.linkedin}
                 target='_blank'
                 rel='noreferrer'
                 title='Linkedin'>
-                <span className='font-main'>
+                <span className='text-orange-550'>
                   <BsLinkedin />
                 </span>
               </a>
