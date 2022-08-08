@@ -20,7 +20,7 @@ const Home = () => {
 
   return (
     <>
-      <div className='mx-[20vw] h-[calc(100vh-calc(50vh-6rem))] md:h-[calc(100vh-calc(50vh-10rem))] xl:mx-[10vw] md:text-center'>
+      <div className='mx-[15vw] h-[calc(100vh-calc(50vh-6rem))] md:h-[calc(100vh-calc(50vh-10rem))] xl:mx-[10vw] md:text-center'>
         <div className=''>
           <motion.div
             initial={{ opacity: 0 }}
