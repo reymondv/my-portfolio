@@ -7,7 +7,7 @@ const Footer = () => {
     <>
       <footer className='p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-[#0b0f0f]'>
         <div className='flex items-center justify-between px-[14.6vw] sm:px-0 sm:block'>
-          <Link to='/' className='flex items-center mb-0 mx-0'>
+          <Link to='/' className='flex items-center mb-0 mx-0 justify-center'>
             <img src={Logo} className='mr-3 h-8 sm:ml-0' alt='My logo' />
             <span className='self-center text-2xl font-semibold whitespace-nowrap dark:text-white sm:mx-0'>
               <span className='text-orange-550'>&#123;&nbsp;</span>reymondyv

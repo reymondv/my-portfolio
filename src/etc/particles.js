@@ -1,10 +1,9 @@
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
 import tsparticlesconfig from '../data/particlesjs-config.json';
+import React, { useState } from 'react';
 
-import React from 'react';
-
-const particles = () => {
+const particles = React.memo(() => {
   const particlesInit = async (main) => {
     console.log(main);
     await loadFull(main);
@@ -30,6 +29,6 @@ const particles = () => {
       />
     </>
   );
-};
+});
 
 export default particles;

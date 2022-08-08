@@ -47,9 +47,20 @@
         "github": "http://github.com/reymondv",
         "linkedin": "http://linkedin.com/in/reymondyv"
     },
-    "projects": [
-        "/carousel/project-1.png",
-        "/carousel/project-2.png",
-        "/carousel/portfolio-2.png"
+    "projects": [{
+            "title": "DICT Asset Management System",
+            "file": "/carousel/project-1.png",
+            "description": ""
+        },
+        {
+            "title": "FAQ's Chatbot",
+            "file": "/carousel/project-2.png",
+            "description": ""
+        },
+        {
+            "title": "Personal Website Portfolio",
+            "file": "/carousel/portfolio.png",
+            "description": ""
+        }
     ]
 }

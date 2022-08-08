@@ -1,6 +1,6 @@
 import myData from '../../data/data.json';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BiRightArrow, BiLeftArrow } from 'react-icons/bi';
 import { Button, ButtonLink } from '../Button/index.js';
 import { useSwipeable } from 'react-swipeable';
@@ -49,9 +49,9 @@ const Carousel = () => {
               }}
               viewport={{ once: true }}>
               <img
-                className='h-[100%] w-[100%] pointer-events-none object-contain'
-                src={data}
-                alt={data}></img>
+                className='h-[100%] w-[100%] pointer-events-none object-scale-down'
+                src={data.file}
+                alt={data.file}></img>
               <h1 className='text-white text-xl w-[100%] bg-black text-center cursor-pointer'>
                 project[{idx}]
               </h1>
