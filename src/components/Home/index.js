@@ -20,8 +20,8 @@ const Home = () => {
 
   return (
     <>
-      <div className='mx-[15vw] h-[calc(100vh-calc(50vh-6rem))] md:h-[calc(100vh-calc(50vh-10rem))] xl:mx-[10vw] md:text-center'>
-        <div className='h-full md:pt-[18vh] sm:pt-[10vh]'>
+      <div className='mx-[15vw] h-[100vh] xl:mx-[10vw] sm:h-[105vh] md:text-center'>
+        <div className='h-full md:pt-[35vh] sm:pt-[30vh]'>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ const Home = () => {
               delay: 1,
               ease: 'linear',
             }}>
-            <h4 className='md:text-[15px] text-left md:mt-5 w-[35vw] mt-5 md:w-auto'>
+            <h4 className='md:text-[15px] text-left md:mt-5 w-[35vw] mt-5 md:w-auto xl:w-[80%]'>
               {profile.description.map((data, idx) => (
                 <p className='text-comment' key={idx}>
                   {'//'}
@@ -77,9 +77,9 @@ const Home = () => {
                 : { y: -valueX * 1.5 }
             }
             viewport={{ once: true }}
-            className='absolute z-[-1] md:left-0 md:top-[-90vh] sm:left-0 2xl:left-[15rem] xl:left-[13rem] w-full h-50 left-[20rem] top-[-80vh] lg:top-[-70vh] sm:w-full opacity-60'>
+            className='absolute z-[-1] md:left-0 md:top-[-105vh] sm:left-0 xl:left-[10rem] w-full h-50 left-[20rem] top-[-120vh] lg:top-[-115vh] xl:top-[-115vh] sm:w-full opacity-60'>
             <img
-              className='object-cover h-[70vh] sm:h-64 sm:w-64 md:h-[20rem] md:w-auto lg:h-[30rem] lg:w-[30rem] 2xl:h-[35rem] rounded-full'
+              className='object-cover h-[70vh] sm:h-64 sm:w-64 md:h-[20rem] md:w-auto lg:h-[30rem] rounded-full'
               src='/profile.jpg'
               alt=''
             />

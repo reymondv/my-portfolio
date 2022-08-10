@@ -1,4 +1,5 @@
-import { Button } from '../Button/index.js';
+import { Button, ButtonLink } from '../Button/index.js';
+import { BsGithub } from 'react-icons/bs';
 
 const Card = (props) => {
   return (
@@ -9,8 +10,13 @@ const Card = (props) => {
           <div className='font-bold text-xl mb-2 text-black'>{props.title}</div>
           <p className='text-gray-700 text-base'>{props.children}</p>
         </div>
-        <div className='px-2 pt-4 pb-4'>
+        <div className='px-2 pt-4 pb-4 align-center justify-between flex text-center content-between'>
           <Button onClickButton={props.clicked}>Read more</Button>
+          {props?.link && (
+            <ButtonLink link={props.link}>
+              <BsGithub /> &nbsp;GitHub
+            </ButtonLink>
+          )}
         </div>
       </div>
     </>

@@ -16,7 +16,7 @@ function App() {
     <BrowserRouter>
       <Header json={myData.links} />
       <ScrollToTop />
-      <div className='container text-white pt-[calc(50vh-6rem)] h-[100%] overflow-hidden'>
+      <div className='container text-white pt-[20%] xl:pt-[30%] h-[100%] overflow-hidden'>
         <Routes>
           <Route exact path='/' element={<Home />} />
 
