@@ -37,7 +37,7 @@ const Carousel = () => {
         <div className='relative'>
           {projects.map((data, idx) => (
             <motion.div
-              className='absolute sm:static w-[80vw] h-[90vh] bg-gradient-to-r from-slate-50 via-neutral-200 to-stone-300 rounded-[45px] top-[-45vh] shadow-2xl cursor-grab'
+              className='absolute overflow-hidden sm:static w-[80vw] h-[90vh] bg-gradient-to-r from-slate-50 via-neutral-200 to-stone-300 rounded-[45px] top-[-45vh] shadow-2xl cursor-grab'
               key={idx}
               initial={{ scale: 0, rotation: -180 }}
               whileTap={{ cursor: 'grabbing' }}
@@ -52,7 +52,7 @@ const Carousel = () => {
                 className='h-[100%] w-[100%] pointer-events-none object-scale-down'
                 src={data.file}
                 alt={data.file}></img>
-              <h1 className='text-white text-xl w-[100%] bg-black text-center cursor-pointer'>
+              <h1 className='text-white text-xl z-1 w-[100%] bg-black text-center cursor-pointer'>
                 project[{idx}]
               </h1>
             </motion.div>

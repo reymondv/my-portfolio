@@ -29,6 +29,7 @@ module.exports = {
         green: {
           450: '#00ec47',
         },
+        comment: '#8E8E8E',
       },
     },
   },

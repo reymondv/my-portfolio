@@ -21,10 +21,10 @@ const Home = () => {
   return (
     <>
       <div className='mx-[15vw] h-[calc(100vh-calc(50vh-6rem))] md:h-[calc(100vh-calc(50vh-10rem))] xl:mx-[10vw] md:text-center'>
-        <div className=''>
+        <div className='h-full md:pt-[18vh] sm:pt-[10vh]'>
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, y: 110 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.9,
               delay: 0.3,
@@ -36,7 +36,7 @@ const Home = () => {
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, y: 110 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.9,
               delay: 1,
@@ -50,7 +50,7 @@ const Home = () => {
           <motion.div
             className='h-[25vh]'
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, y: 110 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.9,
               delay: 1,
@@ -58,7 +58,7 @@ const Home = () => {
             }}>
             <h4 className='md:text-[15px] text-left md:mt-5 w-[35vw] mt-5 md:w-auto'>
               {profile.description.map((data, idx) => (
-                <p className='text-gray-400' key={idx}>
+                <p className='text-comment' key={idx}>
                   {'//'}
                   {data}
                 </p>
@@ -77,9 +77,9 @@ const Home = () => {
                 : { y: -valueX * 1.5 }
             }
             viewport={{ once: true }}
-            className='absolute z-[-1] md:left-0 md:top-[-60vh] sm:left-0 2xl:left-[15rem] xl:left-[13rem] w-full h-50 left-[20rem] top-[-45vh] sm:w-full opacity-60'>
+            className='absolute z-[-1] md:left-0 md:top-[-90vh] sm:left-0 2xl:left-[15rem] xl:left-[13rem] w-full h-50 left-[20rem] top-[-80vh] lg:top-[-70vh] sm:w-full opacity-60'>
             <img
-              className='object-cover h-[70vh] sm:h-64 sm:w-64 md:h-[20rem] md:w-auto lg:h-[25rem] lg:w-[24rem] 2xl:h-[35rem] rounded-full'
+              className='object-cover h-[70vh] sm:h-64 sm:w-64 md:h-[20rem] md:w-auto lg:h-[30rem] lg:w-[30rem] 2xl:h-[35rem] rounded-full'
               src='/profile.jpg'
               alt=''
             />

@@ -48,18 +48,21 @@
         "linkedin": "http://linkedin.com/in/reymondyv"
     },
     "projects": [{
+            "title": "Personal Website Portfolio",
+            "file": "/carousel/portfolio-2.png",
+            "link": "https://github.com/reymondv/my-portfolio",
+            "description": ""
+        },
+        {
             "title": "DICT Asset Management System",
             "file": "/carousel/project-1.png",
+            "link": "",
             "description": ""
         },
         {
             "title": "FAQ's Chatbot",
             "file": "/carousel/project-2.png",
-            "description": ""
-        },
-        {
-            "title": "Personal Website Portfolio",
-            "file": "/carousel/portfolio.png",
+            "link": "https://gitlab.com/2191962/data-mining-chatbot",
             "description": ""
         }
     ]

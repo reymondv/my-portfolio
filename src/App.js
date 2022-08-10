@@ -10,6 +10,8 @@ import Contact from './components/About/index.js';
 import Footer from './components/Footer/index.js';
 
 function App() {
+  const { projects } = myData;
+
   return (
     <BrowserRouter>
       <Header json={myData.links} />
@@ -18,7 +20,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Home />} />
 
-          <Route path='/works' element={<Works json={myData.experience} />} />
+          <Route path='/works' element={<Works json={projects} />} />
 
           <Route path='/about' element={<About />} />
 
