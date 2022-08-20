@@ -26,8 +26,8 @@ const Header = ({ json }) => {
         <div className='logo'>
           <Link to='/' onClick={menuClicked}>
             <img src={Logo} alt={Logo} />
-            <span className='text-orange-550'>&#123;&nbsp;</span>reymondyv
-            <span className='text-orange-550'>&nbsp;&#125;</span>
+            <span className='text-primary'>&#123;&nbsp;</span>reymondyv
+            <span className='text-primary'>&nbsp;&#125;</span>
           </Link>
         </div>
         <ul>
@@ -81,26 +81,24 @@ const Header = ({ json }) => {
                 {({ isActive }) => (isActive ? '.contact()' : 'contact')}
               </NavLink>
             </li>
-            <li className='text-[1.5rem] mx-2 pt-1 my-0 flex-auto items-center text-center md:inline-flex md:pt-[1rem] md:mx-auto md:my-auto '>
+            <li className='text-[1.5rem] mx-2 pt-1 my-0 flex-auto items-center text-center md:inline-flex md:pt-[1rem] md:mx-auto md:my-auto'>
               <a
+                className='text-primary'
                 href={json.github}
                 target='_blank'
                 rel='noreferrer'
                 title='Github'>
-                <span className='text-orange-550'>
-                  <BsGithub />
-                </span>
+                <BsGithub />
               </a>
             </li>
-            <li className='text-[1.5rem] mx-2 pt-1 my-0 flex-auto items-center text-center md:inline-flex md:pt-[1rem] md:mx-auto md:my-auto '>
+            <li className='text-[1.5rem] mx-2 pt-1 my-0 flex-auto items-center text-center md:inline-flex md:pt-[1rem] md:mx-auto md:my-auto'>
               <a
+                className='text-primary'
                 href={json.linkedin}
                 target='_blank'
                 rel='noreferrer'
                 title='Linkedin'>
-                <span className='text-orange-550'>
-                  <BsLinkedin />
-                </span>
+                <BsLinkedin />
               </a>
             </li>
           </div>

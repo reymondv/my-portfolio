@@ -16,7 +16,7 @@ const particles = React.memo(() => {
         init={particlesInit}
         options={tsparticlesconfig}
         style={{
-          height: '100vh',
+          height: '100%',
           top: 0,
           left: 0,
           right: 0,
@@ -24,7 +24,7 @@ const particles = React.memo(() => {
           position: 'absolute',
           margin: 0,
           padding: 0,
-          zIndex: -1,
+          zIndex: -999,
         }}
       />
     </>

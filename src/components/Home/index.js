@@ -5,6 +5,7 @@ import Carousel from '../Carousel/index.js';
 import { useEffect, useState } from 'react';
 import { useIsMedium } from '../../etc/MediaQuery.js';
 import myData from '../../data/data.json';
+import { ButtonA } from '../Button/index.js';
 
 const Home = () => {
   const [valueX, setX] = useState(0);
@@ -31,7 +32,7 @@ const Home = () => {
               ease: 'linear',
             }}>
             <h1 className='text-3xl sm:text-[20px]'>
-              <span className='text-orange-550'>this.</span>reymond_villanueva
+              <span className='text-primary'>this.</span>reymond_villanueva
             </h1>
           </motion.div>
           <motion.div
@@ -39,21 +40,20 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.9,
-              delay: 1,
+              delay: 0.5,
               ease: 'linear',
             }}>
             <h4 className='sm:text-[13px]'>
-              <span className='text-green-450'>FULL STACK DEVELOPER</span>
+              <span className='text-sub'>FULL STACK DEVELOPER</span>
             </h4>
           </motion.div>
 
           <motion.div
-            className='h-[25vh]'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.9,
-              delay: 1,
+              delay: 0.5,
               ease: 'linear',
             }}>
             <h4 className='md:text-[15px] text-left md:mt-5 w-[35vw] mt-5 md:w-auto xl:w-[80%]'>
@@ -64,6 +64,21 @@ const Home = () => {
                 </p>
               ))}
             </h4>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.9,
+              delay: 1,
+              ease: 'linear',
+            }}
+            className='container text-left mt-5'>
+            <ButtonA
+              to='/about'
+              className='py-3 px-3 bg-white text-black rounded-[20px] hover:bg-slate-300'>
+              Know more
+            </ButtonA>
           </motion.div>
         </div>
         <Particles />

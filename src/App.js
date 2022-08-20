@@ -6,7 +6,7 @@ import Home from './components/Home/index.js';
 import Header from './components/Header/index.js';
 import Works from './components/Works/index.js';
 import About from './components/About/index.js';
-import Contact from './components/About/index.js';
+import Contact from './components/Contact/index.js';
 import Footer from './components/Footer/index.js';
 
 function App() {

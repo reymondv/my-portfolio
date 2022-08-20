@@ -35,6 +35,7 @@ const Works = ({ json }) => {
             key={idx}
             title={data.title}
             image={data.file}
+            stack={data.stack}
             link={data.link}
             clicked={() => triggerModal(data.desc, data.title)}>
             {data.description}

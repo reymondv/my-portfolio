@@ -16,7 +16,7 @@
         }
     },
     "cv": {
-        "file": "reymond.villanueva.cv.pdf",
+        "file": "/cv.reymond.villanueva.pdf",
         "name": "My CV",
         "label": "CV"
     },
@@ -24,8 +24,55 @@
         "general": [
             "Fullstack Developer", "Backend Developer", "Web and Software application", "Networking"
         ],
-        "stack": ["HTML", "CSS", "JavaScript", "PHP", "React", "Laravel Framework",
-            "Java", "Python", "MySQL", "MongoDB"
+        "stack": [{
+                "name": "HTML5",
+                "img": "https://img.icons8.com/color/48/000000/html-5--v1.png"
+            },
+            {
+                "name": "CSS3",
+                "img": "https://img.icons8.com/color/48/000000/css3.png"
+            },
+            {
+                "name": "Bootstrap",
+                "img": "https://img.icons8.com/color/48/000000/bootstrap.png"
+            },
+            {
+                "name": "TailwindCSS",
+                "img": "https://img.icons8.com/color/48/000000/tailwindcss.png"
+            },
+            {
+                "name": "JavaScript",
+                "img": "https://img.icons8.com/color/48/000000/javascript--v1.png"
+            },
+            {
+                "name": "Laravel",
+                "img": "https://img.icons8.com/fluency/48/000000/laravel.png"
+            },
+            {
+                "name": "PHP",
+                "img": "https://img.icons8.com/offices/40/000000/php-logo.png"
+            },
+            {
+                "name": "React",
+                "img": "https://img.icons8.com/office/40/000000/react.png"
+            },
+
+            {
+                "name": "Java",
+                "img": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png"
+            },
+            {
+                "name": "Python",
+                "img": "https://img.icons8.com/color/48/000000/python--v1.png"
+            },
+            {
+                "name": "MySQL",
+                "img": "https://img.icons8.com/color/48/000000/mysql-logo.png"
+            },
+            {
+                "name": "Git",
+                "img": "https://img.icons8.com/color/48/000000/git.png"
+            }
         ],
         "other": ["Network administration", "Network troubleshooting", "Git", "Microsoft Power Apps"]
     },
@@ -51,18 +98,85 @@
             "title": "Personal Website Portfolio",
             "file": "/carousel/portfolio-2.png",
             "link": "https://github.com/reymondv/my-portfolio",
-            "description": ""
+            "description": "",
+            "stack": [{
+                    "name": "React",
+                    "img": "https://img.icons8.com/office/40/000000/react.png"
+                },
+                {
+                    "name": "JavaScript",
+                    "img": "https://img.icons8.com/color/48/000000/javascript--v1.png"
+                },
+                {
+                    "name": "HTML5",
+                    "img": "https://img.icons8.com/color/48/000000/html-5--v1.png"
+                },
+                {
+                    "name": "CSS3",
+                    "img": "https://img.icons8.com/color/48/000000/css3.png"
+                },
+                {
+                    "name": "TailwindCSS",
+                    "img": "https://img.icons8.com/color/48/000000/tailwindcss.png"
+                }
+            ]
         },
         {
             "title": "DICT Asset Management System",
             "file": "/carousel/project-1.png",
-            "description": ""
+            "description": "",
+            "stack": [{
+                    "name": "Laravel",
+                    "img": "https://img.icons8.com/fluency/48/000000/laravel.png"
+                },
+                {
+                    "name": "PHP",
+                    "img": "https://img.icons8.com/offices/40/000000/php-logo.png"
+                },
+                {
+                    "name": "JavaScript",
+                    "img": "https://img.icons8.com/color/48/000000/javascript--v1.png"
+                },
+                {
+                    "name": "HTML5",
+                    "img": "https://img.icons8.com/color/48/000000/html-5--v1.png"
+                },
+                {
+                    "name": "CSS3",
+                    "img": "https://img.icons8.com/color/48/000000/css3.png"
+                },
+                {
+                    "name": "Bootstrap",
+                    "img": "https://img.icons8.com/color/48/000000/bootstrap.png"
+                },
+                {
+                    "name": "MySQL",
+                    "img": "https://img.icons8.com/color/48/000000/mysql-logo.png"
+                },
+                {
+                    "name": "Git",
+                    "img": "https://img.icons8.com/color/48/000000/git.png"
+                }
+            ]
         },
         {
             "title": "FAQ's Chatbot",
             "file": "/carousel/project-2.png",
             "link": "https://gitlab.com/2191962/data-mining-chatbot",
-            "description": ""
+            "description": "",
+            "stack": [{
+                    "name": "Python",
+                    "img": "https://img.icons8.com/color/48/000000/python--v1.png"
+                },
+                {
+                    "name": "HTML5",
+                    "img": "https://img.icons8.com/color/48/000000/html-5--v1.png"
+                },
+                {
+                    "name": "CSS3",
+                    "img": "https://img.icons8.com/color/48/000000/css3.png"
+                }
+            ]
         }
     ]
 }

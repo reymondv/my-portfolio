@@ -2,7 +2,7 @@ import myData from '../../data/data.json';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { BiRightArrow, BiLeftArrow } from 'react-icons/bi';
-import { Button, ButtonLink } from '../Button/index.js';
+import { ButtonA } from '../Button/index.js';
 import { useSwipeable } from 'react-swipeable';
 
 const Carousel = () => {
@@ -70,7 +70,11 @@ const Carousel = () => {
         </button>
       </div> */}
       <div className='container text-center mt-[-15vh] md:hidden'>
-        <ButtonLink link='/works'>See more</ButtonLink>
+        <ButtonA
+          to='/works'
+          className='py-3 px-3 bg-black text-white rounded-[20px] hover:bg-slate-800'>
+          See more
+        </ButtonA>
       </div>
     </>
   );

@@ -46,7 +46,7 @@ header {
     transition: color 0.1s linear;
     position: fixed;
     z-index: 9999;
-    a {
+    li {
         color: aliceblue;
     }
 }
@@ -71,8 +71,16 @@ header {
     color: #fff;
 }
 
-header ul {
-    // margin-right: 10vw;
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(73, 218, 243);
 }
 
 .menu {
@@ -86,10 +94,10 @@ header ul {
     min-height: 3rem;
     li {
         position: relative;
+        color: white;
     }
     a {
         position: relative;
-        color: white;
         text-decoration: none;
         margin: 0 15px;
         letter-spacing: 2px;

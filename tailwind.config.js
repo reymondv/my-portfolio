@@ -23,12 +23,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        orange: {
-          550: '#ff6308',
-        },
-        green: {
-          450: '#00ec47',
-        },
+        primary: '#ff6308',
+        sub: '#00ec47',
         comment: '#8E8E8E',
       },
     },
