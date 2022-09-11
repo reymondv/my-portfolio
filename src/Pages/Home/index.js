@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import Particles from '../../etc/particles.js';
-import CurveSVG from '../Divider/curve.js';
-import Carousel from '../Carousel/index.js';
+import CurveSVG from '../../components/Divider/curve.js';
+import Carousel from '../../components/Carousel';
 import { useEffect, useState } from 'react';
-import { useIsMedium } from '../../etc/MediaQuery.js';
+import { useIsMedium } from '../../etc/MediaQuery';
 import myData from '../../data/data.json';
-import { ButtonA } from '../Button/index.js';
+import { ButtonA } from '../../components/Button';
 
 const Home = () => {
   const [valueX, setX] = useState(0);

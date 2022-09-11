@@ -4,10 +4,26 @@ import { BsLinkedin, BsGithub } from 'react-icons/bs';
 import { GrMail } from 'react-icons/gr';
 import { ImDownload } from 'react-icons/im';
 import { motion } from 'framer-motion';
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import { TimelineOppositeContent } from '@mui/lab';
+import { Typography } from '@mui/material';
+import SchoolTwoToneIcon from '@mui/icons-material/SchoolTwoTone';
+import WorkTwoToneIcon from '@mui/icons-material/WorkTwoTone';
+import { color } from '@mui/system';
 
 const About = () => {
   const { experience, skills, links, profile, cv } = myData;
-  console.log(profile);
+
+  const Components = {
+    SchoolTwoToneIcon: <SchoolTwoToneIcon />,
+    WorkTwoToneIcon: <WorkTwoToneIcon />,
+  };
+
   return (
     <>
       <div className='mx-[15vw] h-[150vh] md:h-[120vh] xl:mx-[10vw] md:text-center'>
@@ -74,7 +90,9 @@ const About = () => {
           <h1 className='text-xl mb-5'>Technology Stack</h1>
           <div className='grid grid-cols-6 text-left h-full gap-4'>
             {skills.stack.map((data, idx) => (
-              <div className='w-1/2 justify-center align-center flex h-auto bg-white rounded-xl px-2 py-2 shadow-sm shadow-primary'>
+              <div
+                key={idx}
+                className='w-1/2 justify-center align-center flex h-auto bg-white rounded-xl px-2 py-2 shadow-sm shadow-primary'>
                 <img src={data.img} alt={data.name} title={data.name} />
               </div>
             ))}
@@ -82,6 +100,44 @@ const About = () => {
         </div>
         <div className='w-[80%] mx-0 pt-5'>
           <h1 className='text-xl mb-5'>Relevant Experience</h1>
+          <Timeline sx={{ margin: 0, textAlign: 'left' }}>
+            {experience.map((data, idx) => (
+              <TimelineItem key={idx} sx={{ margin: 0, textAlign: 'left' }}>
+                <TimelineOppositeContent
+                  sx={{ paddingTop: '20px' }}
+                  align='left'
+                  variant='body2'
+                  className='text-comment'>
+                  {data.date}
+                </TimelineOppositeContent>
+                <TimelineSeparator>
+                  <TimelineDot
+                    sx={{
+                      backgroundColor: 'white',
+                      border: 'solid 1px black',
+                      color: 'black',
+                    }}>
+                    <a href={data?.link} target='_blank' rel='noreferrer'>
+                      {Components[data.component]}
+                    </a>
+                  </TimelineDot>
+                  <TimelineConnector sx={{ height: '100px' }} />
+                </TimelineSeparator>
+                <TimelineContent sx={{ py: '12px', px: 2, width: '100vw' }}>
+                  <Typography
+                    component='a'
+                    href={data?.link}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='text-primary'>
+                    {data.company}
+                  </Typography>
+                  <Typography className='text-sub'>{data.position}</Typography>
+                  <Typography>{data.work}</Typography>
+                </TimelineContent>
+              </TimelineItem>
+            ))}
+          </Timeline>
         </div>
         <Particles />
         <motion.div

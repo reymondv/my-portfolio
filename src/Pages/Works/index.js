@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Particles from '../../etc/particles.js';
-import Card from '../Cards/index.js';
-import Modal from '../Modal/index.js';
+import Card from '../../components/Cards';
+import Modal from '../../components/Modal';
 import { useIsMedium } from '../../etc/MediaQuery';
 
 const Works = ({ json }) => {
@@ -20,6 +20,15 @@ const Works = ({ json }) => {
     setModalDescription(desc);
     setModalImage(img);
     setModalProjectLink(link);
+  };
+
+  const modalProps = {
+    show: isShow,
+    close: closeModal,
+    title: modalTitle,
+    description: modalDescription,
+    img: modalImage,
+    link: modalProjectLink,
   };
 
   return (
@@ -43,14 +52,7 @@ const Works = ({ json }) => {
         ))}
         <Particles />
       </div>
-      {!isMedium && (
-        <Modal
-          show={isShow}
-          close={closeModal}
-          title={modalTitle}
-          description={modalDescription}
-        />
-      )}
+      {!isMedium && <Modal {...modalProps} />}
     </>
   );
 };

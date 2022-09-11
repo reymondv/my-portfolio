@@ -35,7 +35,7 @@ const Footer = () => {
                 href={linkData.links.github}
                 target='_blank'
                 rel='noreferrer'
-                className='hover:underline sm:mr-6'>
+                className='mr-4 hover:underline sm:mr-6'>
                 Github
               </a>
             </li>

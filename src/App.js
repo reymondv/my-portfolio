@@ -2,12 +2,12 @@ import './App.scss';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import ScrollToTop from './etc/ScrollToTop.js';
 import myData from './data/data.json';
-import Home from './components/Home/index.js';
-import Header from './components/Header/index.js';
-import Works from './components/Works/index.js';
-import About from './components/About/index.js';
-import Contact from './components/Contact/index.js';
-import Footer from './components/Footer/index.js';
+import Home from './Pages/Home';
+import Header from './components/Header';
+import Works from './Pages/Works';
+import About from './Pages/About';
+import Contact from './Pages/Contact';
+import Footer from './components/Footer';
 
 function App() {
   const { projects } = myData;

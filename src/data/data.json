@@ -77,16 +77,28 @@
         "other": ["Network administration", "Network troubleshooting", "Git", "Microsoft Power Apps"]
     },
     "experience": [{
+            "position": "Web Application Developer",
+            "company": "Squadzip",
+            "date": "August 2022 - Present",
+            "work": "React and Ruby on Rails",
+            "component": "WorkTwoToneIcon",
+            "link": "https://squadzip.com/"
+        },
+        {
             "position": "Application Developer (Internship Trainee)",
             "company": "Accenture",
             "date": "February 2022 - June 2022",
-            "work": "Developed an application using Microsoft Power Apps and SharePoint List as the application's back-end. I've been trained and knowledgeable in Microsoft Power Automate and exposed in collaboration with the team during scrums and sprint meetings."
+            "work": "Developed an application using Microsoft Power Apps and SharePoint List as the application's back-end. I've been trained and knowledgeable in Microsoft Power Automate and exposed in collaboration with the team during scrums and sprint meetings.",
+            "component": "SchoolTwoToneIcon",
+            "link": "https://accenture.com/"
         },
         {
             "position": "Lead Programmer (Thesis Project)",
             "company": "Saint Louis University",
             "date": "May 2021 - November 2021",
-            "work": "Developed an Asset Management System for DICT - Luzon Cluster 1 for my capstone(IT Project) as a Full-stack web developer and the Lead Programmer of the team. Web development background and technologies used are HTML5, CSS3, JavaScript, PHP, Laravel 7, Bootstrap, and MySQL."
+            "work": "Developed an Asset Management System for DICT - Luzon Cluster 1 for my capstone(IT Project) as a Full-stack web developer and the Lead Programmer of the team. Web development background and technologies used are HTML5, CSS3, JavaScript, PHP, Laravel 7, Bootstrap, and MySQL.",
+            "component": "SchoolTwoToneIcon",
+            "link": "https://www.slu.edu.ph/"
         }
     ],
     "links": {
